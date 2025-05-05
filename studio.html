@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio - Studio Odontoiatrico San Zeno</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/logo.png" alt="Logo Studio San Zeno" id="logo-img">
+                </a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" id="close-menu"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="servizi.html">Servizi</a></li>
+                    <li><a href="studio.html">Studio</a></li>
+                    <li><a href="#footer">Contatti</a></li>
+                    <li><a href="#" class="login-btn">Login</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" id="menu-icon"></i>
+        </div>
+    </nav>
+
+    <!-- WhatsApp/Email Button -->
+    <div class="contact-float">
+        <a href="#" id="contact-float-link">
+            <i class="fab fa-whatsapp" id="whatsapp-icon"></i>
+            <i class="fas fa-envelope" id="email-icon"></i>
+        </a>
+    </div>
+
+    <!-- Studio Hero Section -->
+    <section class="page-hero studio-hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Il Nostro Studio</h1>
+            <h2>Un ambiente moderno, accogliente e all'avanguardia</h2>
+        </div>
+    </section>
+
+    <!-- Studio Intro Section -->
+    <section class="studio-intro">
+        <div class="container">
+            <div class="intro-content">
+                <h2>Benvenuti nel nostro studio</h2>
+                <p>Lo Studio Odontoiatrico San Zeno è stato progettato per offrire ai nostri pazienti un'esperienza confortevole in un ambiente moderno e tecnologicamente avanzato. Ogni dettaglio è stato curato per garantire la massima igiene, sicurezza e comfort durante il trattamento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio Gallery Section -->
+    <section class="studio-gallery">
+        <div class="container">
+            <h2>Visita virtuale dello studio</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/img/reception.jpg" alt="Reception" id="gallery-img-1">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">Reception</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/sala-attesa.jpg" alt="Sala d'attesa" id="gallery-img-2">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">Sala d'attesa</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/studio-1.jpg" alt="Studio 1" id="gallery-img-3">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">Studio 1</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/studio-2.jpg" alt="Studio 2" id="gallery-img-4">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">Studio 2</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/sala-sterilizzazione.jpg" alt="Sala sterilizzazione" id="gallery-img-5">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">Sala sterilizzazione</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/sala-radiologia.jpg" alt="Sala radiologia" id="gallery-img-6">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">Sala radiologia</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Gallery Images -->
+    <div id="gallery-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="modal-caption"></div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="studio-features">
+        <div class="container">
+            <h2>Caratteristiche del nostro studio</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Accessibilità</h3>
+                        <p>Studio completamente accessibile ai pazienti con disabilità motorie con rampe, ascensori e servizi dedicati.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Sicurezza e igiene</h3>
+                        <p>Protocolli avanzati di sterilizzazione e disinfezione per garantire la massima sicurezza durante i trattamenti.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-temperature-low"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Comfort</h3>
+                        <p>Ambiente climatizzato, poltrone ergonomiche e sistemi di intrattenimento per rendere piacevole la permanenza.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Parcheggio</h3>
+                        <p>Parcheggio privato gratuito per i pazienti e facile accessibilità con i mezzi pubblici.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location">
+        <div class="container">
+            <h2>Dove siamo</h2>
+            <div class="location-content">
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <!-- In un sito reale qui verrà inserita la mappa di Google Maps -->
+                        <img src="assets/img/map-placeholder.jpg" alt="Mappa" id="map-img">
+                    </div>
+                </div>
+                <div class="location-info">
+                    <h3>Studio Odontoiatrico San Zeno</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Via San Zeno, 123 - 37138 Verona (VR)</p>
+                    <p><i class="fas fa-phone"></i> Tel: <a href="tel:+390451234567">045 123 4567</a></p>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@studiodentisticosanzeno.it">info@studiodentisticosanzeno.it</a></p>
+                    <p><i class="fas fa-clock"></i> Orari di apertura:</p>
+                    <ul class="opening-hours">
+                        <li><span>Lunedì - Venerdì:</span> 9:00 - 19:00</li>
+                        <li><span>Sabato:</span> 9:00 - 13:00</li>
+                        <li><span>Domenica:</span> Chiuso</li>
+                    </ul>
+                    <p><i class="fas fa-bus"></i> Raggiungibile con le linee urbane 21, 22, 23</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Domande frequenti</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Come posso prenotare un appuntamento?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Puoi prenotare un appuntamento chiamando il nostro numero di telefono, inviando un'email o compilando il modulo di contatto presente sul nostro sito.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quali metodi di pagamento accettate?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Accettiamo pagamenti in contanti, carte di credito/debito, bonifico bancario e offriamo diverse opzioni di finanziamento e rateizzazione.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Come devo prepararmi alla prima visita?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ti consigliamo di portare con te eventuali radiografie recenti, un elenco dei farmaci che stai assumendo e la tua storia medica. Arrива 10-15 minuti prima per compilare il modulo di anamnesi.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quanto dura una prima visita?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>In genere, la prima visita dura circa 45-60 minuti, durante i quali eseguiremo un esame completo, eventuali radiografie e discuteremo le opzioni di trattamento appropriate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prenota una visita presso il nostro studio</h2>
+                <p>Il tuo sorriso merita il meglio. Contattaci oggi stesso per fissare un appuntamento.</p>
+                <a href="#footer" class="btn">Contattaci ora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Studio Odontoiatrico San Zeno</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Via San Zeno, 123 - 37138 Verona (VR)</p>
+                    <p><i class="fas fa-phone"></i> Tel: <a href="tel:+390451234567">045 123 4567</a></p>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@studiodentisticosanzeno.it">info@studiodentisticosanzeno.it</a></p>
+                    <p><i class="fas fa-clock"></i> Orari: Lun-Ven 9:00-19:00 | Sab 9:00-13:00</p>
+                </div>
+                <div class="footer-form">
+                    <h3>Richiedi un appuntamento</h3>
+                    <form id="appointment-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Nome e Cognome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Telefono" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Messaggio" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Invia richiesta</button>
+                    </form>
+                </div>
+                <div class="footer-social">
+                    <h3>Seguici sui social</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Studio Odontoiatrico San Zeno. Tutti i diritti riservati. P.IVA: 01234567890</p>
+                <p>Sito realizzato da <a href="#">WebMaster</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

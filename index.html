@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Odontoiatrico San Zeno</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/logo.png" alt="Logo Studio San Zeno" id="logo-img">
+                </a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" id="close-menu"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="servizi.html">Servizi</a></li>
+                    <li><a href="studio.html">Studio</a></li>
+                    <li><a href="#footer">Contatti</a></li>
+                    <li><a href="#" class="login-btn">Login</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" id="menu-icon"></i>
+        </div>
+    </nav>
+
+    <!-- WhatsApp/Email Button -->
+    <div class="contact-float">
+        <a href="#" id="contact-float-link">
+            <i class="fab fa-whatsapp" id="whatsapp-icon"></i>
+            <i class="fas fa-envelope" id="email-icon"></i>
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Studio Odontoiatrico San Zeno</h1>
+            <h2>La tua salute dentale è la nostra priorità</h2>
+            <a href="#footer" class="btn">Richiedi un appuntamento</a>
+        </div>
+    </section>
+
+    <!-- News Section - Conditional Visibility -->
+    <section class="news" id="news-section">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="news-content">
+                <h2>Novità</h2>
+                <p id="news-message">Contenuto dinamico che sarà caricato da Firestore</p>
+                <a href="#" class="btn" id="news-link">Scopri di più</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="cards-section">
+        <div class="container">
+            <h2>Esplora il nostro studio</h2>
+            <div class="cards">
+                <a href="team.html" class="card">
+                    <div class="card-img">
+                        <img src="assets/img/team.jpg" alt="Il nostro team">
+                    </div>
+                    <div class="card-content">
+                        <h3>Il nostro team</h3>
+                        <p>Scopri i professionisti che si prenderanno cura del tuo sorriso</p>
+                    </div>
+                </a>
+                <a href="servizi.html" class="card">
+                    <div class="card-img">
+                        <img src="assets/img/servizi.jpg" alt="I nostri servizi">
+                    </div>
+                    <div class="card-content">
+                        <h3>I nostri servizi</h3>
+                        <p>Esplora la gamma completa di servizi odontoiatrici che offriamo</p>
+                    </div>
+                </a>
+                <a href="studio.html" class="card">
+                    <div class="card-img">
+                        <img src="assets/img/studio.jpg" alt="Il nostro studio">
+                    </div>
+                    <div class="card-content">
+                        <h3>Il nostro studio</h3>
+                        <p>Visita virtualmente i nostri ambienti accoglienti e moderni</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>I nostri servizi</h2>
+            <div class="services-tabs">
+                <div class="tabs-buttons">
+                    <button class="tab-btn active" data-id="ortodonzia">Ortodonzia</button>
+                    <button class="tab-btn" data-id="endodonzia">Endodonzia Conservativa</button>
+                    <button class="tab-btn" data-id="protesi">Protesi</button>
+                    <button class="tab-btn" data-id="igiene">Igiene e Parodontologia</button>
+                    <button class="tab-btn" data-id="implantologia">Implantologia e chirurgia</button>
+                    <button class="tab-btn" data-id="estetica">Estetica dentale</button>
+                </div>
+                <div class="tabs-content">
+                    <div class="tab-content active" id="ortodonzia">
+                        <div class="tab-image">
+                            <img src="assets/img/ortodonzia.jpg" alt="Ortodonzia">
+                        </div>
+                        <div class="tab-description">
+                            <h3>Ortodonzia</h3>
+                            <p>Trattamenti ortodontici per correggere l'allineamento dei denti e migliorare l'estetica del sorriso.</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="endodonzia">
+                        <div class="tab-image">
+                            <img src="assets/img/endodonzia.jpg" alt="Endodonzia Conservativa">
+                        </div>
+                        <div class="tab-description">
+                            <h3>Endodonzia Conservativa</h3>
+                            <p>Trattamenti canalari e conservativi per salvare i denti danneggiati e prevenire l'estrazione.</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="protesi">
+                        <div class="tab-image">
+                            <img src="assets/img/protesi.jpg" alt="Protesi">
+                        </div>
+                        <div class="tab-description">
+                            <h3>Protesi</h3>
+                            <p>Soluzioni protesiche personalizzate per ripristinare la funzionalità e l'estetica del sorriso.</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="igiene">
+                        <div class="tab-image">
+                            <img src="assets/img/igiene.jpg" alt="Igiene e Parodontologia">
+                        </div>
+                        <div class="tab-description">
+                            <h3>Igiene e Parodontologia</h3>
+                            <p>Trattamenti per la prevenzione e la cura delle malattie gengivali e il mantenimento della salute orale.</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="implantologia">
+                        <div class="tab-image">
+                            <img src="assets/img/implantologia.jpg" alt="Implantologia e chirurgia">
+                        </div>
+                        <div class="tab-description">
+                            <h3>Implantologia e chirurgia odontoiatrica</h3>
+                            <p>Interventi chirurgici avanzati e inserimento di impianti per ripristinare denti mancanti.</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="estetica">
+                        <div class="tab-image">
+                            <img src="assets/img/estetica.jpg" alt="Estetica dentale">
+                        </div>
+                        <div class="tab-description">
+                            <h3>Estetica dentale e smile design</h3>
+                            <p>Trattamenti dedicati a migliorare l'estetica del sorriso e realizzare il sorriso dei tuoi sogni.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <div class="container">
+            <h2>Cosa dicono i nostri pazienti</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="assets/img/google-icon.png" alt="Google Icon" class="google-icon">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-text">Personale professionale e gentile. Ambiente pulito e accogliente. Consigliatissimo!</p>
+                    <p class="reviewer">- Marco R.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="assets/img/google-icon.png" alt="Google Icon" class="google-icon">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-text">Lo studio dentistico migliore di Verona. Professionali e puntuali.</p>
+                    <p class="reviewer">- Giulia M.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="assets/img/google-icon.png" alt="Google Icon" class="google-icon">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="review-text">Finalmente uno studio dove i bambini non hanno paura di andare dal dentista!</p>
+                    <p class="reviewer">- Francesca B.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="assets/img/google-icon.png" alt="Google Icon" class="google-icon">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-text">Ho risolto un problema che mi affliggeva da anni. Grazie a tutto il team!</p>
+                    <p class="reviewer">- Alessandro P.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="assets/img/google-icon.png" alt="Google Icon" class="google-icon">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-text">Prezzi onesti e trasparenti. Servizio eccellente. Non cambierò mai dentista!</p>
+                    <p class="reviewer">- Sofia T.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="assets/img/google-icon.png" alt="Google Icon" class="google-icon">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="review-text">Dentisti preparati e aggiornati sulle tecniche più moderne. Molto soddisfatto.</p>
+                    <p class="reviewer">- Roberto G.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Studio Odontoiatrico San Zeno</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Via San Zeno, 123 - 37138 Verona (VR)</p>
+                    <p><i class="fas fa-phone"></i> Tel: <a href="tel:+390451234567">045 123 4567</a></p>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@studiodentisticosanzeno.it">info@studiodentisticosanzeno.it</a></p>
+                    <p><i class="fas fa-clock"></i> Orari: Lun-Ven 9:00-19:00 | Sab 9:00-13:00</p>
+                </div>
+                <div class="footer-form">
+                    <h3>Richiedi un appuntamento</h3>
+                    <form id="appointment-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Nome e Cognome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Telefono" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Messaggio" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Invia richiesta</button>
+                    </form>
+                </div>
+                <div class="footer-social">
+                    <h3>Seguici sui social</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Studio Odontoiatrico San Zeno. Tutti i diritti riservati. P.IVA: 01234567890</p>
+                <p>Sito realizzato da <a href="#">WebMaster</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
