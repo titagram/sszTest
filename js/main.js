@@ -4,7 +4,7 @@
  */
 
 // Attendi che il DOM sia completamente caricato
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Riferimenti agli elementi del DOM
     const menuIcon = document.getElementById('menu-icon');
     const closeMenu = document.getElementById('close-menu');
@@ -30,14 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Menu mobile: apri
     if (menuIcon) {
-        menuIcon.addEventListener('click', function() {
+        menuIcon.addEventListener('click', function () {
             navLinks.classList.add('active');
         });
     }
 
     // Menu mobile: chiudi
     if (closeMenu) {
-        closeMenu.addEventListener('click', function() {
+        closeMenu.addEventListener('click', function () {
             navLinks.classList.remove('active');
         });
     }
@@ -59,15 +59,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Gestione dei tab nella sezione servizi
     if (tabBtns.length > 0 && tabContents.length > 0) {
         tabBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 // Rimuovi la classe active da tutti i tab button
                 tabBtns.forEach(b => b.classList.remove('active'));
                 // Aggiungi la classe active al tab button cliccato
                 this.classList.add('active');
-                
+
                 // Nascondi tutti i contenuti dei tab
                 tabContents.forEach(content => content.classList.remove('active'));
-                
+
                 // Mostra il contenuto del tab selezionato
                 const tabId = this.getAttribute('data-id');
                 document.getElementById(tabId).classList.add('active');
@@ -77,9 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Gestione del form di appuntamento
     if (appointmentForm) {
-        appointmentForm.addEventListener('submit', function(e) {
+        appointmentForm.addEventListener('submit', function (e) {
             e.preventDefault(); // Previeni l'invio del form
-            
+
             // Raccogli i dati del form
             const formData = {
                 name: document.getElementById('name').value,
@@ -87,13 +87,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 phone: document.getElementById('phone').value,
                 message: document.getElementById('message').value
             };
-            
+
             // In futuro, qui andrà il codice per inviare i dati a Firebase
             console.log('Form data:', formData);
-            
+
             // Feedback all'utente
             alert('Grazie per la tua richiesta! Ti contatteremo al più presto.');
-            
+
             // Reset del form
             appointmentForm.reset();
         });
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // In futuro, questa funzione preleverà il valore da Firestore
         // Per ora, simuliamo il comportamento con una variabile locale
         const showNews = true; // Placeholder, in futuro sarà da Firestore
-        
+
         if (showNews && newsSection) {
             newsSection.style.display = 'block';
             // In futuro, popolare anche il testo della news da Firestore
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('news-link').href = '#footer';
         }
     }
-    
+
     // Esegui il controllo all'avvio
     checkNewsVisibility();
 
@@ -120,11 +120,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (faqItems.length > 0) {
         faqItems.forEach(item => {
             const question = item.querySelector('.faq-question');
-            
-            question.addEventListener('click', function() {
+
+            question.addEventListener('click', function () {
                 // Toggle della classe active per l'elemento corrente
                 item.classList.toggle('active');
-                
+
                 // Chiudi tutti gli altri elementi
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item) {
@@ -138,27 +138,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Galleria immagini con modal
     if (galleryItems.length > 0 && modal && modalImg && modalCaption) {
         galleryItems.forEach(item => {
-            item.addEventListener('click', function() {
+            item.addEventListener('click', function () {
                 modal.style.display = 'block';
-                
+
                 // Prendi l'immagine cliccata e mostrala nel modal
                 const imgSrc = this.querySelector('img').src;
                 const imgCaption = this.querySelector('.gallery-text').textContent;
-                
+
                 modalImg.src = imgSrc;
                 modalCaption.textContent = imgCaption;
             });
         });
-        
+
         // Chiudi il modal quando si clicca sulla X
         if (closeModal) {
-            closeModal.addEventListener('click', function() {
+            closeModal.addEventListener('click', function () {
                 modal.style.display = 'none';
             });
         }
-        
+
         // Chiudi il modal quando si clicca fuori dall'immagine
-        window.addEventListener('click', function(event) {
+        window.addEventListener('click', function (event) {
             if (event.target === modal) {
                 modal.style.display = 'none';
             }
@@ -167,23 +167,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Animazione di scroll fluido per i link interni
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
             if (targetId === '#') return; // Ignora link vuoti
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 // Calcola l'offset per tenere conto della navbar
                 const navbarHeight = document.querySelector('.navbar').offsetHeight;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
                 });
-                
+
                 // Chiudi il menu mobile se aperto
                 if (navLinks.classList.contains('active')) {
                     navLinks.classList.remove('active');
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             // Qui in futuro ci sarà il codice per connettersi a Firestore
             // e caricare i dati dinamici
-            
+
             // Esempio di come verrà implementato:
             // 
             // // Importa i moduli necessari di Firebase
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
             //     reviewsData.push({ id: doc.id, ...doc.data() });
             // });
             // updateReviewsContent(reviewsData);
-            
+
             console.log('Dati caricati correttamente da Firestore (simulazione)');
         } catch (error) {
             console.error('Errore nel caricamento dei dati:', error);
@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Effetto di animazione per gli elementi quando entrano nel viewport
     function animateOnScroll() {
         const elements = document.querySelectorAll('.animate-on-scroll');
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, {
             threshold: 0.1
         });
-        
+
         elements.forEach(element => {
             observer.observe(element);
         });
@@ -335,7 +335,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Aggiungi la classe 'scrolled' alla navbar quando si scorre la pagina
     function handleNavbarScroll() {
         const navbar = document.querySelector('.navbar');
-        
+
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
@@ -353,11 +353,28 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tabBtns.length > 0 && tabContents.length > 0) {
             tabBtns[0].click();
         }
-        
+
         // In futuro, qui chiameremo la funzione per caricare i dati da Firestore
         // loadDataFromFirestore();
     }
 
     // Esegui l'inizializzazione
     initSite();
+
+    // Aggiungiamo questa funzione nel file main.js
+    function checkAndShowPromotionModal() {
+        // In futuro, il valore sarà prelevato da Firestore
+        const showPromotion = true; // Simulazione
+        const promotionId = "ortodonzia-apr2025"; // Identificativo univoco per la promozione
+
+        // Controlla se la promozione è attiva e se l'utente non l'ha già vista
+        if (showPromotion && !sessionStorage.getItem('promo_' + promotionId)) {
+            // Mostra il modal dopo 2 secondi dall'apertura della pagina
+            setTimeout(() => {
+                document.getElementById('promotion-modal').style.display = 'block';
+                // Memorizza che l'utente ha visto la promozione in questa sessione
+                sessionStorage.setItem('promo_' + promotionId, 'true');
+            }, 2000);
+        }
+    }
 });

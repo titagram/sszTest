@@ -1117,4 +1117,96 @@ footer {
     .review-card, .member-card, .service-item {
         margin-bottom: 1.5rem;
     }
+
+    /* Stili per il modal della promozione */
+.promotion-modal {
+    display: none;
+    position: fixed;
+    z-index: 1200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.4s;
+}
+
+.promotion-content {
+    position: relative;
+    background-color: #fff;
+    margin: 2% auto;
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s;
+    overflow: hidden;
+}
+
+.promotion-image-container {
+    text-align: center;
+    overflow: auto;
+    max-height: 80vh;
+}
+
+.promotion-image-container img {
+    width: auto;
+    max-width: 100%;
+    max-height: 80vh;
+    margin: 0 auto;
+    display: block;
+}
+
+.close-promotion {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #777;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-promotion:hover {
+    color: var(--primary-color);
+}
+
+.promotion-actions {
+    text-align: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.promotion-btn {
+    margin: 0 10px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes slideIn {
+    from {transform: translateY(-50px); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
+}
+
+@media screen and (max-width: 768px) {
+    .promotion-content {
+        margin: 0 auto;
+        max-width: 100%;
+        height: 100vh;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+}
 }
