@@ -249,7 +249,7 @@ section {
 /* Hero Section */
 .hero, .page-hero {
     height: 100vh;
-    background-image: url('../assets/img/hero-bg.jpg');
+    background-image: url('../assets/img/3_res.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
