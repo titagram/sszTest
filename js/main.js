@@ -356,6 +356,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // In futuro, qui chiameremo la funzione per caricare i dati da Firestore
         // loadDataFromFirestore();
+        checkAndShowPromotionModal();
     }
 
     // Esegui l'inizializzazione
@@ -363,18 +364,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Aggiungiamo questa funzione nel file main.js
     function checkAndShowPromotionModal() {
-        // In futuro, il valore sarà prelevato da Firestore
         const showPromotion = true; // Simulazione
         const promotionId = "ortodonzia-apr2025"; // Identificativo univoco per la promozione
 
         // Controlla se la promozione è attiva e se l'utente non l'ha già vista
         if (showPromotion && !sessionStorage.getItem('promo_' + promotionId)) {
-            // Mostra il modal dopo 2 secondi dall'apertura della pagina
             setTimeout(() => {
                 document.getElementById('promotion-modal').style.display = 'block';
-                // Memorizza che l'utente ha visto la promozione in questa sessione
                 sessionStorage.setItem('promo_' + promotionId, 'true');
             }, 2000);
         }
     }
+
+    const promotionModal = document.getElementById('promotion-modal');
+    const closePromotion = document.querySelector('.close-promotion');
+    const promotionButton = document.querySelector('.promotion-btn');
+
+// Chiudi il modal quando si clicca sulla X
+if (closePromotion && promotionModal) {
+    closePromotion.addEventListener('click', function() {
+        promotionModal.style.display = 'none';
+    });
+    
+    // Chiudi il modal quando si clicca fuori dall'immagine
+    window.addEventListener('click', function(event) {
+        if (event.target === promotionModal) {
+            promotionModal.style.display = 'none';
+        }
+    });
+
+    // Chiudi il modal quando si clicca sul pulsante "Prenota ora"
+    if (promotionButton) {
+        promotionButton.addEventListener('click', function() {
+            promotionModal.style.display = 'none';
+        });
+    }
+}
 });
